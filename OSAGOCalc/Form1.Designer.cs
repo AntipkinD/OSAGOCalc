@@ -271,10 +271,12 @@
             // 
             // result
             // 
+            this.result.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.result.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.result.Location = new System.Drawing.Point(502, 372);
             this.result.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.result.Name = "result";
+            this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(459, 31);
             this.result.TabIndex = 12;
             this.result.Text = "Результат";
