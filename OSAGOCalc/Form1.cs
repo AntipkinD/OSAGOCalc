@@ -26,6 +26,7 @@ namespace OSAGOCalc
         double km;
         double ks;
         string tosave;
+        //Метод для расчета ОСАГО
         public void Figureout_button_Click(object sender, EventArgs e)
         {
             if (double.TryParse(BT.Text, out this.bt) == true & double.TryParse(KT.Text, out this.kt) == true & double.TryParse(KBM.Text, out this.kbm) == true & double.TryParse(KO.Text, out this.ko) == true
@@ -36,7 +37,7 @@ namespace OSAGOCalc
             }
             else MessageBox.Show("Пожалуйста, введите или выберите числовые значения!", "Неверный ввод", MessageBoxButtons.OK);
         }
-
+        //Метод для очистки полей
         public void Clear_button_Click(object sender, EventArgs e)
         {
             BT.Text = "Базовый тариф(БТ)";
@@ -48,7 +49,7 @@ namespace OSAGOCalc
             KS.Text = "Коэффициент сезонности (КС)";
             result.Text = "Результат";
         }
-
+        //Метод для расчета ОСАГО и сохранения результата в файл
         public void Export_button_Click(object sender, EventArgs e)
         {
             if (double.TryParse(BT.Text, out this.bt) == true & double.TryParse(KT.Text, out this.kt) == true & double.TryParse(KBM.Text, out this.kbm) == true & double.TryParse(KO.Text, out this.ko) == true

@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace OSAGOCalc
 {
+    //Класс для сохранения в файл
     public class Saver
     {
         public Saver(string text)
