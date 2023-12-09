@@ -27,7 +27,7 @@ namespace OSAGOCalc
         public double ks;
         public string tosave;
         //Метод для расчета ОСАГО
-        void GetResult(double bt, double kt, double kbm, double ko, double kvs, double km, double ks, TextBox xtx)
+        public static void GetResult(double bt, double kt, double kbm, double ko, double kvs, double km, double ks, TextBox xtx)
         {
             double rslt = bt * kt * kbm * ko * kvs * km * ks;
             xtx.Text = Convert.ToString(rslt);
@@ -68,7 +68,7 @@ namespace OSAGOCalc
                 $"\nКоэффициент возраста и стажа (КВС): {this.kvs}" +
                 $"\nКоэффициент мощности двигателя (КМ): {this.km}" +
                 $"\nКоэффициент сезонности (КС): {this.ks}" +
-                $"\nРезультат: {this.rslt}";
+                $"\nРезультат: {result.Text}";
                 Saver saver = new Saver(this.tosave);
             }
             else MessageBox.Show("Пожалуйста, сперва введите или выберите числовые значения коэффициентов и нажмите кнопку \"Расчет\"!", "Неверный ввод", MessageBoxButtons.OK);
